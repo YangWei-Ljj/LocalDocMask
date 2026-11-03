@@ -1,0 +1,128 @@
+{
+  "generated": "2026-10-25",
+  "note": "合成测试文件均在 pytest 的临时目录(tmp_path)内自动生成，未写入交付目录；此处为清单记录。",
+  "cases": [
+    {
+      "id": "TC-001",
+      "format": "docx",
+      "purpose": "正文/表格/页眉脱敏",
+      "sensitive": [
+        "姓名",
+        "身份证",
+        "手机",
+        "邮箱",
+        "银行卡",
+        "公司"
+      ],
+      "expect_audit": "通过",
+      "expect_export": "导出"
+    },
+    {
+      "id": "TC-002",
+      "format": "pdf",
+      "purpose": "文本删除+替换",
+      "sensitive": [
+        "公司",
+        "姓名",
+        "手机"
+      ],
+      "expect_audit": "通过",
+      "expect_export": "导出"
+    },
+    {
+      "id": "TC-003",
+      "format": "xlsx",
+      "purpose": "隐藏表/批注脱敏",
+      "sensitive": [
+        "姓名",
+        "身份证",
+        "手机"
+      ],
+      "expect_audit": "通过",
+      "expect_export": "导出"
+    },
+    {
+      "id": "TC-004",
+      "format": "png",
+      "purpose": "图片OCR+像素删除",
+      "sensitive": [
+        "姓名",
+        "手机"
+      ],
+      "expect_audit": "通过",
+      "expect_export": "导出"
+    },
+    {
+      "id": "TC-005",
+      "format": "docx",
+      "purpose": "脚注脱敏",
+      "sensitive": [
+        "姓名",
+        "身份证"
+      ],
+      "expect_audit": "通过",
+      "expect_export": "导出"
+    },
+    {
+      "id": "TC-006",
+      "format": "docx",
+      "purpose": "嵌入图像敏感文字",
+      "sensitive": [
+        "姓名",
+        "手机"
+      ],
+      "expect_audit": "不通过(阻止)",
+      "expect_export": "阻止"
+    },
+    {
+      "id": "TC-007",
+      "format": "xlsx",
+      "purpose": "OLE嵌入对象",
+      "sensitive": [
+        "姓名"
+      ],
+      "expect_audit": "不通过(阻止)",
+      "expect_export": "阻止"
+    },
+    {
+      "id": "TC-008",
+      "format": "xlsm",
+      "purpose": "宏(VBA)",
+      "sensitive": [
+        "姓名"
+      ],
+      "expect_audit": "不通过(阻止)",
+      "expect_export": "阻止"
+    },
+    {
+      "id": "TC-009",
+      "format": "pdf",
+      "purpose": "表单字段",
+      "sensitive": [
+        "姓名"
+      ],
+      "expect_audit": "不通过(阻止)",
+      "expect_export": "阻止"
+    },
+    {
+      "id": "TC-010",
+      "format": "pdf",
+      "purpose": "加密文件",
+      "sensitive": [
+        "-"
+      ],
+      "expect_audit": "拒绝",
+      "expect_export": "阻止"
+    },
+    {
+      "id": "TC-011",
+      "format": "txt",
+      "purpose": "不支持格式",
+      "sensitive": [
+        "-"
+      ],
+      "expect_audit": "拒绝",
+      "expect_export": "阻止"
+    }
+  ]
+}

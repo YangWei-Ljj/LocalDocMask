@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "suite_id": "synthetic-recognition-v1",
+  "suite_version": "1.0.0",
+  "samples": [
+    {
+      "path": "cases.yaml",
+      "sha256": "513908d6373f7ee4364b8e4aeda81bf1eac9984726bfdb5ed8606256d9b1cad1",
+      "kind": "labeled_cases",
+      "sample_count": 101
+    }
+  ],
+  "sample_count": 101,
+  "category_counts": {
+    "公司名": 20,
+    "固定电话": 5,
+    "姓名": 9,
+    "手机号": 12,
+    "护照号": 2,
+    "编号": 2,
+    "自定义敏感词": 5,
+    "详细地址": 1,
+    "身份证号": 2,
+    "邮箱": 9,
+    "银行卡号": 2
+  },
+  "file_format_counts": {
+    "text": 101
+  },
+  "synthetic": true,
+  "provenance": "LocalDocMask 项目内人工构造的合成文本；不对应真实个人或企业。",
+  "created_at": "2026-10-30T00:00:00Z",
+  "compatible_policy_versions": [
+    "recognition-v1"
+  ],
+  "compatible_tool_versions": [
+    "0.1.0"
+  ],
+  "baseline": {
+    "path": "../../baselines/synthetic-recognition-v1.baseline.json",
+    "sha256": "fe6e33227c5383be62fb7c487608ffc5faeda059ef832109eb2235e30868e29d"
+  },
+  "ready": true,
+  "missing_sources": [],
+  "suite_hash": "c953475daae86efe743cb4af8deb93617c5059417b5e329cd419366f13c3fa91"
+}

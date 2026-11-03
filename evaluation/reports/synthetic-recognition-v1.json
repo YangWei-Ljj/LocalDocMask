@@ -1,0 +1,284 @@
+{
+  "baseline_delta": {
+    "f1": 0.0,
+    "p0_regressions": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "suppress_accuracy": 0.0
+  },
+  "cases": 101,
+  "config_hash": "1afaf2b4bc9f751262c8414e44496d55e4f24e18b45b83cb4da306b5dff1bc42",
+  "decision_counts": {
+    "auto_confirm": 51,
+    "needs_review": 18,
+    "suppress": 22
+  },
+  "dry_run": false,
+  "execution_status": "completed",
+  "failed_samples": [],
+  "failure_reasons": [],
+  "gate_status": "passed",
+  "generated_at": "2026-10-30T05:40:13.957263+00:00",
+  "hash_mismatches": [],
+  "integrity_errors": [],
+  "missing_sources": [],
+  "overall": {
+    "f1": 1.0,
+    "fn": 0,
+    "fp": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "tp": 69
+  },
+  "per_category": {
+    "公司名": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 20
+    },
+    "固定电话": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 5
+    },
+    "姓名": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 9
+    },
+    "手机号": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 12
+    },
+    "护照号": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2
+    },
+    "编号": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2
+    },
+    "自定义敏感词": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 5
+    },
+    "详细地址": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1
+    },
+    "身份证号": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2
+    },
+    "邮箱": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 9
+    },
+    "银行卡号": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2
+    }
+  },
+  "per_file_format": {
+    "text": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 69
+    }
+  },
+  "per_recognition_source": {
+    "blacklist": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 7
+    },
+    "dict": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 9
+    },
+    "domain": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 5
+    },
+    "public": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1
+    },
+    "regex": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 47
+    }
+  },
+  "per_type": {
+    "公司名": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 20
+    },
+    "固定电话": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 5
+    },
+    "姓名": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 9
+    },
+    "手机号": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 12
+    },
+    "护照号": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2
+    },
+    "编号": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2
+    },
+    "自定义敏感词": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 5
+    },
+    "详细地址": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1
+    },
+    "身份证号": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2
+    },
+    "邮箱": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 9
+    },
+    "银行卡号": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2
+    }
+  },
+  "policy_version": "recognition-v1",
+  "provenance": "LocalDocMask 项目内人工构造的合成文本；不对应真实个人或企业。",
+  "quality_status": "passed",
+  "regression_flag": false,
+  "report_schema_version": 1,
+  "review_rate": 0.2609,
+  "safety_failures": [],
+  "sample_count": 101,
+  "suite_hash": "c953475daae86efe743cb4af8deb93617c5059417b5e329cd419366f13c3fa91",
+  "suite_id": "synthetic-recognition-v1",
+  "suite_version": "1.0.0",
+  "suppress": {
+    "correctly_suppressed": 46,
+    "should_suppress_but_active": 0,
+    "suppress_accuracy": 1.0
+  },
+  "suppress_accuracy": 1.0,
+  "synthetic": true,
+  "tool_version": "0.1.0"
+}

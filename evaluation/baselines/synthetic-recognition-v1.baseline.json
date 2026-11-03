@@ -1,0 +1,122 @@
+{
+  "metrics": {
+    "overall": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 69
+    },
+    "per_category": {
+      "公司名": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 20
+      },
+      "固定电话": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 5
+      },
+      "姓名": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 9
+      },
+      "手机号": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 12
+      },
+      "护照号": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2
+      },
+      "编号": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2
+      },
+      "自定义敏感词": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 5
+      },
+      "详细地址": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 1
+      },
+      "身份证号": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2
+      },
+      "邮箱": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 9
+      },
+      "银行卡号": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2
+      }
+    },
+    "suppress_accuracy": 1.0
+  },
+  "p0_categories": [
+    "身份证号",
+    "银行卡号",
+    "手机号",
+    "公司名"
+  ],
+  "previous_baseline_sha256": "",
+  "schema_version": 1,
+  "suite_hash": "c953475daae86efe743cb4af8deb93617c5059417b5e329cd419366f13c3fa91",
+  "suite_id": "synthetic-recognition-v1",
+  "suite_version": "1.0.0",
+  "tolerances": {
+    "f1_abs": 0.01,
+    "p0_category_f1_abs": 0.01,
+    "recall_abs": 0.01,
+    "suppress_accuracy_abs": 0.01
+  },
+  "update_reason": "初始化 v1 版本化合成回归基线",
+  "updated_at": "2026-10-30T00:00:00Z"
+}

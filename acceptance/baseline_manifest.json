@@ -1,0 +1,218 @@
+{
+  "root": "<PROJECT_ROOT>",
+  "files": [
+    {
+      "path": "src/localdocmask/__init__.py",
+      "sha256": "1fc003539f2cda65dc6b17f0d9d9c69f421d19b1cc61927f070ea9355d05f663"
+    },
+    {
+      "path": "src/localdocmask/__main__.py",
+      "sha256": "4fddc30cfeae39c25c5c2dfa4b177f50e18fb4da37384379d6dbdc512074e773"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/__init__.cpython-311.pyc",
+      "sha256": "ebb363d8d595bffcfb4eb5288ce6d9452ad9f124b7745ebe1f848f2f7d1e5d3c"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/auditor.cpython-311.pyc",
+      "sha256": "d222c23f76f26d5ff68d411fc010267c69c1714978591f42cd1d7c78d3cf06b9"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/config.cpython-311.pyc",
+      "sha256": "7705426ce5d99d1585964418e12f021683b0923887cffdc08e86cb7beb68d778"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/detection.cpython-311.pyc",
+      "sha256": "59cb91e552ece8888a01c2ef378a686900050a37dac799ff3eb299a51f4de85f"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/gui.cpython-311.pyc",
+      "sha256": "3398aea80f60a30eb013d3af66ac04b1b3e9fa815b438d921fd13867f64d5aee"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/hashing.cpython-311.pyc",
+      "sha256": "0a73707ab90145cc233b315ed8c479de95184426416a9db05416a81fc3dde816"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/masker.cpython-311.pyc",
+      "sha256": "585c5a0a18a37f492c030447b3f427ad4f229ea814b05dbb9f74db0cbc76202d"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/models.cpython-311.pyc",
+      "sha256": "ab6b79d0a2776ce173845444fd86530e710d19946f754dc906619e918c4d209c"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/ocr.cpython-311.pyc",
+      "sha256": "5d5e36a5178f5bf1b7cf849c9eef0cf19cac4c55616fd490d0c8ec98ed59f7b5"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/ollama.cpython-311.pyc",
+      "sha256": "76f06e597acb304f651ef618c74edcf7e74dc7dfc7c021205b2f1b83c86fd439"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/patterns.cpython-311.pyc",
+      "sha256": "1dad65e08201e6f767f57ed8c3bdf60cbfc80db930234a2cd24332a2f5621d3c"
+    },
+    {
+      "path": "src/localdocmask/__pycache__/task_manager.cpython-311.pyc",
+      "sha256": "f4100d8bfbc9f6923227f1b908dcf1951719f662d2566af3f82f412081fbd4f4"
+    },
+    {
+      "path": "src/localdocmask/auditor.py",
+      "sha256": "07d351a9473b5673b172e453406f9304574fda5a56bc8686e72273b8dcb0eb54"
+    },
+    {
+      "path": "src/localdocmask/config.py",
+      "sha256": "ac110419bea91e0a34dc28d233123c4e60ccc813b41d832c5b49fb844cc197c2"
+    },
+    {
+      "path": "src/localdocmask/detection.py",
+      "sha256": "9f9c9663c675c7057ef2e1a4b410774e50aa563ac48813b2d091096f1c5af386"
+    },
+    {
+      "path": "src/localdocmask/formats/__init__.py",
+      "sha256": "c4705bd4752db3a024169d33f54b275e5b800931d301196afd5743475d9b3617"
+    },
+    {
+      "path": "src/localdocmask/formats/__pycache__/__init__.cpython-311.pyc",
+      "sha256": "b30cba155e36d38a502ff33bdca7b937c9addefa08f89ab2415b6d4d25cc7f53"
+    },
+    {
+      "path": "src/localdocmask/formats/__pycache__/base.cpython-311.pyc",
+      "sha256": "07aa9defbbf783692487f36f59f46f5b8f0230c290f644befc6f8a51dd047f22"
+    },
+    {
+      "path": "src/localdocmask/formats/__pycache__/docx.cpython-311.pyc",
+      "sha256": "5274200c47133a5407b54872a3f34eeae7d0e3d216959a28c8854e3397ecdf67"
+    },
+    {
+      "path": "src/localdocmask/formats/__pycache__/image.cpython-311.pyc",
+      "sha256": "627112df65b3bbc581b780246f905b647b68ff86ba2282aab2d1de8cfbd92275"
+    },
+    {
+      "path": "src/localdocmask/formats/__pycache__/pdf.cpython-311.pyc",
+      "sha256": "cbde00595327517f9b04dd7eb281bb720d175e56aa3e856c873b61765d6773b2"
+    },
+    {
+      "path": "src/localdocmask/formats/__pycache__/xlsx.cpython-311.pyc",
+      "sha256": "79ae8c4c723aeb5aeb2a73a2107f8f1728502157184271786b633d5f5b240b14"
+    },
+    {
+      "path": "src/localdocmask/formats/base.py",
+      "sha256": "1b9812bc55a4c565edde37f1d911675acb4b622dbedf05be3b35ffa227017330"
+    },
+    {
+      "path": "src/localdocmask/formats/docx.py",
+      "sha256": "959b434034b2b00e61a45f87a1655eaf9e8af92854804c99cd62cd54ec3921ed"
+    },
+    {
+      "path": "src/localdocmask/formats/image.py",
+      "sha256": "d845428346af5d10d8880d2f19cbf8595c3992fcbc4addb49c741c7d029fcfbb"
+    },
+    {
+      "path": "src/localdocmask/formats/pdf.py",
+      "sha256": "6f287e59615a5d8882bc3a448f11c0de97d9a756ffb45dd174da71c30a744309"
+    },
+    {
+      "path": "src/localdocmask/formats/xlsx.py",
+      "sha256": "9bfd54bd80015192d662a3e9b57403d7021cbddf9f48582dd15f14ce1f762818"
+    },
+    {
+      "path": "src/localdocmask/gui.py",
+      "sha256": "9f4999f31d02fc7429c9919a38f2447e15d1cbc1897e12cc6c2085eda1328c54"
+    },
+    {
+      "path": "src/localdocmask/hashing.py",
+      "sha256": "502ec72b6729e8bfa533f4a228f646aebe0d5ebcdc840f12c2d659fbee255238"
+    },
+    {
+      "path": "src/localdocmask/masker.py",
+      "sha256": "4ddc64307dff1271655953d378572409c16a83c8ee6d38cb81b0924c4cc0f5ef"
+    },
+    {
+      "path": "src/localdocmask/models.py",
+      "sha256": "1008e682b639df9922c800475adb0564656104f4ed4680bf880a38925213fa91"
+    },
+    {
+      "path": "src/localdocmask/ocr.py",
+      "sha256": "6eaa74769667d4a45a55a956a28c8e1b8cdb0ed82f53a6f151a43341e55ca285"
+    },
+    {
+      "path": "src/localdocmask/ollama.py",
+      "sha256": "6bfa3522d04367b37edb372762bb89a94a05cd99448afb9044a2756973cbe503"
+    },
+    {
+      "path": "src/localdocmask/patterns.py",
+      "sha256": "b8050293c645a5cbaae2f3b7ebf7e48d5952ec7d4146c615ac5e81e69c5b42b1"
+    },
+    {
+      "path": "src/localdocmask/task_manager.py",
+      "sha256": "bb6f5a5aeac3ab3da75920d171c2d82d755db34367536ad9161629fb0a2d7615"
+    },
+    {
+      "path": "tests/__pycache__/conftest.cpython-311-pytest-9.1.1.pyc",
+      "sha256": "a04ed08464a12008e53a79e0299d25d26e5b74f07d79a93d22b43f52de0f8fbf"
+    },
+    {
+      "path": "tests/__pycache__/test_detection.cpython-311-pytest-9.1.1.pyc",
+      "sha256": "ff7a7ee7589ca32d01a3abb9021ab038ac92c77d860dec49c5e6e5f6df24f06b"
+    },
+    {
+      "path": "tests/__pycache__/test_masker.cpython-311-pytest-9.1.1.pyc",
+      "sha256": "83c37dcad67c7329306a86e18377966ac1be91478d1e664f02775a4385646512"
+    },
+    {
+      "path": "tests/__pycache__/test_pipeline.cpython-311-pytest-9.1.1.pyc",
+      "sha256": "063b1a7053f076f0be7c450dc7547f5924e93ff055cfcd76002f1b27a8ce0f7f"
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "36dd7b4a91a7ceabd1aae669c26f549143980194c1a45c34a92513c954f689f6"
+    },
+    {
+      "path": "tests/test_detection.py",
+      "sha256": "34f6539200439722271a820f7ad7a75f801223acf208a15f3bc67a0531393d90"
+    },
+    {
+      "path": "tests/test_masker.py",
+      "sha256": "9a54e957205f9fb34c75bafe2693e6893135bdce54be818d270d899b40834e75"
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "sha256": "95a84db1ad252f236c52e9fd3ae4873f73de2e6d2b80976b96939a8f877fa3a2"
+    },
+    {
+      "path": "docs/未完成安全功能清单.md",
+      "sha256": "ee71cd7992e8fec6e0c829ae609f745d53480fffc2229455cddd653ab012ec36"
+    },
+    {
+      "path": "docs/测试报告.md",
+      "sha256": "23888f172d40829db1de9a4662841db2b82131516fa48cfcf1c346ebd1b3e00e"
+    },
+    {
+      "path": "main.py",
+      "sha256": "f0825680cdc5b243bfd613f9b8f3d5118dfba12110851cfc55127852330993c9"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "ab1ec291e61adf6ea4e64a889bcae0f4b816726f2e7f5fe1680ea42bcf2d7a88"
+    },
+    {
+      "path": "README.md",
+      "sha256": "32573f1eb59e84d0f8ab7a40d81e838fcde53824656c5cceddb8d39dbedcc66d"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "cfe8d89dcbffbd8fc5ee7e2f53fb3a7bd6c1b794a5e8bb6ce5048d58f7397615"
+    },
+    {
+      "path": "启动.bat",
+      "sha256": "d304d4c899d0dfdef02184ae40424e003594a774d32c8b33cb2e78e8210c7e93"
+    },
+    {
+      "path": "运行测试.bat",
+      "sha256": "626da4ede676ac7f4dcbdd312738ab5d717d6dd51298e330f8cf7cebe7ebe02c"
+    }
+  ],
+  "count": 53
+}

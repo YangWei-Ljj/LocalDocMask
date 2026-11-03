@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "project": "LocalDocMask",
+    "document": "企业级工程化改造验收矩阵",
+    "version": "2.0",
+    "date": "2026-11-02",
+    "status": "pending_external_validation",
+    "current_candidate_status": "pending_external_validation",
+    "status_source": "dist/t9-evidence/release-summary.json",
+    "production_release": false,
+    "status_rule": "仅 release-summary.json 可作为当前发布状态来源"
+  },
+  "capabilities": [
+    {
+      "id": "E-01",
+      "capability": "显式任务状态机与事件链",
+      "current_status": "implemented",
+      "evidence": "domain/state_machine.py、task_events、事件链校验与恢复测试"
+    },
+    {
+      "id": "E-02",
+      "capability": "幂等声明与产物哈希复用门禁",
+      "current_status": "implemented",
+      "evidence": "唯一幂等键、claim_or_get、成功产物 SHA-256 校验"
+    },
+    {
+      "id": "E-03",
+      "capability": "硬超时与进程回收",
+      "current_status": "implemented",
+      "evidence": "GuardedWorker、scan/process/audit 子进程终止、并发隔离测试"
+    },
+    {
+      "id": "E-04",
+      "capability": "文件准入与原子导出",
+      "current_status": "implemented",
+      "evidence": "真实类型、ZIP/OLE、资源上限、受控临时文件、原子落位和崩溃对账"
+    },
+    {
+      "id": "E-05",
+      "capability": "取消、有限重试与队列背压",
+      "current_status": "implemented",
+      "evidence": "CancelToken、CANCELLED/TIMED_OUT、上限退避、共享并发上限"
+    },
+    {
+      "id": "E-06",
+      "capability": "临时文件生命周期与可观测性",
+      "current_status": "implemented",
+      "evidence": "temp manifest、TTL 清理、健康检查、本地指标和脱敏诊断包"
+    },
+    {
+      "id": "E-07",
+      "capability": "复核持久化、单文件取消和用户导出",
+      "current_status": "implemented",
+      "evidence": "候选复核字段持久化、原子用户导出、默认拒绝覆盖、actor 可追溯"
+    },
+    {
+      "id": "E-08",
+      "capability": "版本化评测与发布门禁",
+      "current_status": "implemented",
+      "evidence": "synthetic-recognition-v1、suite/baseline hash、CLI 门禁和回归阈值"
+    },
+    {
+      "id": "E-09",
+      "capability": "SBOM 与打包后 E2E",
+      "current_status": "implemented",
+      "evidence": "运行时依赖闭包 SBOM、package-e2e.json、DOCX/XLSX/PNG OCR/quarantine"
+    }
+  ],
+  "security": [
+    {
+      "id": "S-01",
+      "capability": "原件只读与 SHA-256 绑定",
+      "current_status": "implemented"
+    },
+    {
+      "id": "S-02",
+      "capability": "失败关闭与 quarantine",
+      "current_status": "implemented"
+    },
+    {
+      "id": "S-03",
+      "capability": "明文映射落盘",
+      "current_status": "disabled",
+      "note": "mapping.persistence=disk 会拒绝启动"
+    },
+    {
+      "id": "S-04",
+      "capability": "本地 NER 默认批准模型",
+      "current_status": "implemented",
+      "note": "模型异常时 degraded 并失败关闭"
+    },
+    {
+      "id": "S-05",
+      "capability": "多用户登录/RBAC/OIDC/远程服务",
+      "current_status": "not_applicable_current_local_single_user"
+    }
+  ],
+  "exit_gate": {
+    "existing_tests": "以当前执行 evidence 为准，不维护固定数量",
+    "engineering_gates": "以 dist/t9-evidence/build.json 为准",
+    "external_validation": "pending_external_validation",
+    "production_release": false,
+    "status_source": "dist/t9-evidence/release-summary.json"
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "generated": "2026-10-25",
+  "items": [
+    {
+      "id": "A1",
+      "cat": "安全阻断",
+      "risk": "P0",
+      "req": "原件完整性",
+      "method": "源文件只读/重复运行/哈希前后比对",
+      "expected": "哈希不变且不覆盖原件",
+      "actual": "哈希不变",
+      "evidence": "test_gate.py",
+      "status": "通过"
+    },
+    {
+      "id": "A2",
+      "cat": "安全阻断",
+      "risk": "P0",
+      "req": "本地处理与网络边界",
+      "method": "全文检索网络客户端 + 代理绕过验证",
+      "expected": "仅本机 Ollama 且不走代理",
+      "actual": "仅 ollama.py，强制回环+禁代理",
+      "evidence": "grep + test_ollama_*",
+      "status": "通过"
+    },
+    {
+      "id": "A3",
+      "cat": "安全阻断",
+      "risk": "P0",
+      "req": "导出安全门禁",
+      "method": "伪造/空报告、宏、损坏输出、表单字段等 12 种场景",
+      "expected": "除全部安全外均禁止导出",
+      "actual": "均禁止导出",
+      "evidence": "test_security.py/test_gate.py",
+      "status": "通过"
+    },
+    {
+      "id": "A4",
+      "cat": "安全阻断",
+      "risk": "P0",
+      "req": "审计独立性",
+      "method": "重新读取输出文件(文本/OCR/XML)",
+      "expected": "不信任处理模块标志",
+      "actual": "独立重提取",
+      "evidence": "auditor.py + test_audit_catches_residual",
+      "status": "通过"
+    },
+    {
+      "id": "A5",
+      "cat": "安全阻断",
+      "risk": "P0",
+      "req": "原始敏感内容残留",
+      "method": "独立工具重提取各格式",
+      "expected": "无残留",
+      "actual": "无残留",
+      "evidence": "test_pipeline.py/test_gate.py",
+      "status": "通过"
+    },
+    {
+      "id": "A6",
+      "cat": "安全阻断",
+      "risk": "P1",
+      "req": "路径与文件操作安全",
+      "method": "检查路径穿越/清理范围",
+      "expected": "不越出项目目录",
+      "actual": "输出名取自文件名stem，清理仅限 staging",
+      "evidence": "代码审查",
+      "status": "通过"
+    },
+    {
+      "id": "B1",
+      "cat": "格式处理",
+      "risk": "P1",
+      "req": "PDF 真删除+对象清理",
+      "method": "文本/扫描页/元数据/附件/表单字段",
+      "actual": "文本真删除、扫描页像素红化、表单字段阻止",
+      "evidence": "test_pipeline.py/test_gate.py",
+      "status": "通过"
+    },
+    {
+      "id": "B2",
+      "cat": "格式处理",
+      "risk": "P1",
+      "req": "DOCX 隐藏内容",
+      "method": "段落/表格/页眉页脚/脚注尾注/批注/修订/元数据",
+      "actual": "全部覆盖，嵌入图像敏感文字阻止",
+      "evidence": "test_security.py",
+      "status": "通过"
+    },
+    {
+      "id": "B3",
+      "cat": "格式处理",
+      "risk": "P1",
+      "req": "XLSX/XLSM 隐藏内容",
+      "method": "隐藏表/批注/超链接/宏/外部链接/OLE",
+      "actual": "隐藏表与批注处理，宏/外链/OLE阻止",
+      "evidence": "test_pipeline.py/test_security.py",
+      "status": "通过"
+    },
+    {
+      "id": "B4",
+      "cat": "格式处理",
+      "risk": "P1",
+      "req": "图片像素删除",
+      "method": "OCR定位+像素覆盖+重新OCR",
+      "actual": "像素覆盖+审计复查",
+      "evidence": "test_pipeline.py",
+      "status": "通过"
+    },
+    {
+      "id": "C1",
+      "cat": "识别",
+      "risk": "P1",
+      "req": "敏感信息识别",
+      "method": "虚构数据正反例",
+      "actual": "身份证/手机/邮箱/银行卡/地址/编号/公司/姓名/自定义词均识别",
+      "evidence": "test_detection.py",
+      "status": "通过"
+    },
+    {
+      "id": "D1",
+      "cat": "脱敏模式",
+      "risk": "P1",
+      "req": "模式A/B",
+      "method": "掩码与一致虚构替换",
+      "actual": "A 掩码、B 一致替换、号码仍掩码、映射不落盘",
+      "evidence": "test_masker.py",
+      "status": "通过"
+    },
+    {
+      "id": "E1",
+      "cat": "桌面应用",
+      "risk": "P2",
+      "req": "GUI 可用",
+      "method": "实际启动 + 构造",
+      "actual": "MainWindow 构造、实际启动稳定",
+      "evidence": "GUI 启动验证",
+      "status": "通过"
+    },
+    {
+      "id": "F1",
+      "cat": "工程质量",
+      "risk": "P2",
+      "req": "异常/资源/文档",
+      "method": "代码审查 + 回归",
+      "actual": "异常 fail-closed，资源关闭，README/脚本齐全",
+      "evidence": "代码审查",
+      "status": "通过"
+    },
+    {
+      "id": "L1",
+      "cat": "已知限制",
+      "risk": "P1",
+      "req": "图形印章/签名/二维码",
+      "method": "无法自动识别",
+      "actual": "提示人工复核",
+      "evidence": "docs",
+      "status": "需人工复核"
+    },
+    {
+      "id": "L2",
+      "cat": "已知限制",
+      "risk": "P2",
+      "req": "审计/OCR超时、GUI取消",
+      "method": "未实现",
+      "actual": "记录限制",
+      "evidence": "docs",
+      "status": "未实现(已记录)"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# LocalDocMask 依赖清单（Python 3.11）
+PySide6==6.12.0
+PyMuPDF==2.0.0
+python-docx==1.2.0
+openpyxl==3.1.5
+Pillow==13.0.0
+opencv-python==5.0.0.93
+rapidocr-onnxruntime==1.4.4
+requests==2.34.2
+pytest==9.1.1

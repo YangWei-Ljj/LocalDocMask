@@ -1,0 +1,55 @@
+# LocalDocMask 配置示例
+# 复制为 config/config.yaml 后生效（config.yaml 已 gitignore，请勿提交）。
+# 缺省字段自动回退安全默认值；非法值会在启动时显式报错。
+
+# ---- 路径（可选）----
+# data_dir 留空时默认 <项目根>/data；环境变量 LOCALDOCMASK_HOME 优先级最高。
+paths:
+  data_dir: null
+
+# ---- Ollama 本地模型 ----
+# 仅允许本机回环地址；enabled 默认 false（默认不启用任何外部网络/模型调用）。
+ollama:
+  url: http://127.0.0.1:11434
+  model: qwen3.5:9b
+  enabled: false
+  timeout: 300
+
+# ---- 本地中文 NER（ADR-009，随包批准模型）----
+# 默认启用；仅作低权重候选（source=ner），不决定"是否残留/可否导出"。
+# 模型缺失、损坏或清单校验失败时保留规则路径，并将健康状态标记为 degraded。
+# 标签映射：PER→姓名、ORG→公司名、LOC→详细地址。
+ner:
+  enabled: true                  # 默认启用随包批准模型
+  model_dir: ""                  # 留空 => approved 目录或 bundle resources/ner_bert4ner
+  device: cpu                    # cpu / cuda（无 GPU 自动回退 CPU）
+  max_length: 256                # 单块最大 token 长度（64~512）
+
+# ---- 识别与复核 ----
+recognition:
+  enable_company_regex: true      # 是否启用公司名正则
+  auto_confirm_threshold: 0.9     # 置信度 >= 该值自动确认（0~1）
+  review_threshold: 0.5          # 置信度 < 该值抑制或待复核（0~1）
+  review_mode: interactive        # interactive=人工复核 / auto_safe=批量自动
+
+# ---- 脱敏 ----
+masking:
+  mode: a                         # a=统一掩码 / b=一致性虚构替换
+  mask: "****"
+  mapping_scope: batch            # 批次内共享同一映射
+  mapping_persistence: memory     # 当前仅支持 memory；disk 会拒绝启动
+
+# ---- 安全 ----
+security:
+  allowed_networks:               # 网络白名单，默认仅回环
+    - "127.0.0.1/8"
+    - "::1/128"
+  tempfile_retention_days: 1      # 临时文件保留天数
+
+# ---- 日志 ----
+logging:
+  level: INFO                     # DEBUG/INFO/WARNING/ERROR/CRITICAL
+  format: json                    # 文件固定结构化 JSON；控制台为可读格式
+  retention_days: 14              # 日志保留天数
+  max_bytes: 10485760            # 单文件大小上限（字节），超限轮转
+  backup_count: 30                # 轮转保留份数

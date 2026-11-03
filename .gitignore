@@ -1,0 +1,38 @@
+# 虚拟环境
+.venv/
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+# 运行数据（中间/输出/隔离文件，不入库）
+data/
+# 评测结果与坏例（可能含敏感文本，不入库）
+evaluation/results/
+badcases.yaml
+
+# NER 模型制品（ADR-009，体积 ~388MB，按需本机下载，不入库/不打默认包）
+models/
+
+# 临时文件（仅 scripts/ 下的下划线临时脚本；避免误伤 __init__.py 等包文件）
+scripts/_*.py
+_*.png
+_*.pdf
+_*.txt
+
+# 本机实际配置（示例 config.example.yaml 随仓库提交）
+config/config.yaml
+
+# PyInstaller 构建产物
+build/
+dist/
+*.spec
+!LocalDocMask.spec
+
+# 演示脚本的临时 HOME（运行时生成，不入库）
+demo/_home/
+demo/_shot_home/
+
+# 本机生成的发布验收证据（交付时随 dist 保留，不纳入源码提交）
+docs/operations/t9-evidence/
+evaluation/reports/t9-release-gate.json
+docs/operations/t9-*.json

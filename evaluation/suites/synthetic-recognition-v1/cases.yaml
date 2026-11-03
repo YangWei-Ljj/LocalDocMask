@@ -1,0 +1,654 @@
+meta:
+  description: 合成标注集 101 条；规则→上下文→词库→融合三档分流回归。
+  synthetic: true
+  person_dict:
+  - 张伟
+  - 王芳
+  suite_id: synthetic-recognition-v1
+  suite_version: 1.0.0
+  created_at: '2026-10-30T00:00:00Z'
+  provenance: LocalDocMask 项目内人工构造的合成文本；不对应真实个人或企业。
+cases:
+- text: 客户联系电话13812345678，备注0。
+  true_entities:
+  - - 手机号
+    - '13812345678'
+  note: 手机号
+  case_id: case-0001
+  safety_critical: false
+- text: 客户联系电话13900001111，备注1。
+  true_entities:
+  - - 手机号
+    - '13900001111'
+  note: 手机号
+  case_id: case-0002
+  safety_critical: false
+- text: 客户联系电话13711112222，备注2。
+  true_entities:
+  - - 手机号
+    - '13711112222'
+  note: 手机号
+  case_id: case-0003
+  safety_critical: false
+- text: 客户联系电话15011112222，备注3。
+  true_entities:
+  - - 手机号
+    - '15011112222'
+  note: 手机号
+  case_id: case-0004
+  safety_critical: false
+- text: 客户联系电话18612345678，备注4。
+  true_entities:
+  - - 手机号
+    - '18612345678'
+  note: 手机号
+  case_id: case-0005
+  safety_critical: false
+- text: 客户联系电话13511112222，备注5。
+  true_entities:
+  - - 手机号
+    - '13511112222'
+  note: 手机号
+  case_id: case-0006
+  safety_critical: false
+- text: 客户联系电话15812345000，备注6。
+  true_entities:
+  - - 手机号
+    - '15812345000'
+  note: 手机号
+  case_id: case-0007
+  safety_critical: false
+- text: 客户联系电话18911112222，备注7。
+  true_entities:
+  - - 手机号
+    - '18911112222'
+  note: 手机号
+  case_id: case-0008
+  safety_critical: false
+- text: 客户联系电话13312345678，备注8。
+  true_entities:
+  - - 手机号
+    - '13312345678'
+  note: 手机号
+  case_id: case-0009
+  safety_critical: false
+- text: 回执发送至a@b.com存档0。
+  true_entities:
+  - - 邮箱
+    - a@b.com
+  note: 邮箱
+  case_id: case-0010
+  safety_critical: false
+- text: 回执发送至zh@example.com存档1。
+  true_entities:
+  - - 邮箱
+    - zh@example.com
+  note: 邮箱
+  case_id: case-0011
+  safety_critical: false
+- text: 回执发送至support@vendor.cn存档2。
+  true_entities:
+  - - 邮箱
+    - support@vendor.cn
+  note: 邮箱
+  case_id: case-0012
+  safety_critical: false
+- text: 回执发送至hr@corp.com存档3。
+  true_entities:
+  - - 邮箱
+    - hr@corp.com
+  note: 邮箱
+  case_id: case-0013
+  safety_critical: false
+- text: 回执发送至li@firm.cn存档4。
+  true_entities:
+  - - 邮箱
+    - li@firm.cn
+  note: 邮箱
+  case_id: case-0014
+  safety_critical: false
+- text: 回执发送至ops@demo.cn存档5。
+  true_entities:
+  - - 邮箱
+    - ops@demo.cn
+  note: 邮箱
+  case_id: case-0015
+  safety_critical: false
+- text: 回执发送至info@test.org存档6。
+  true_entities:
+  - - 邮箱
+    - info@test.org
+  note: 邮箱
+  case_id: case-0016
+  safety_critical: false
+- text: 结算账户62220202001122338。
+  true_entities:
+  - - 银行卡号
+    - '62220202001122338'
+  note: 银行卡Luhn
+  case_id: case-0017
+  safety_critical: false
+- text: 结算账户6217003810056663。
+  true_entities:
+  - - 银行卡号
+    - '6217003810056663'
+  note: 银行卡Luhn
+  case_id: case-0018
+  safety_critical: false
+- text: 座机010-12345678。
+  true_entities:
+  - - 固定电话
+    - 010-12345678
+  note: 固话
+  case_id: case-0019
+  safety_critical: false
+- text: 座机010-87654321。
+  true_entities:
+  - - 固定电话
+    - 010-87654321
+  note: 固话
+  case_id: case-0020
+  safety_critical: false
+- text: 座机021-55556666。
+  true_entities:
+  - - 固定电话
+    - 021-55556666
+  note: 固话
+  case_id: case-0021
+  safety_critical: false
+- text: 座机0571-88889999。
+  true_entities:
+  - - 固定电话
+    - 0571-88889999
+  note: 固话
+  case_id: case-0022
+  safety_critical: false
+- text: 护照号E12345678。
+  true_entities:
+  - - 护照号
+    - E12345678
+  note: 护照
+  case_id: case-0023
+  safety_critical: false
+- text: 护照号G98765432。
+  true_entities:
+  - - 护照号
+    - G98765432
+  note: 护照
+  case_id: case-0024
+  safety_critical: false
+- text: 身份证11010519491231002X复印留存。
+  true_entities:
+  - - 身份证号
+    - 11010519491231002X
+  note: 身份证校验位
+  case_id: case-0025
+  safety_critical: false
+- text: 供应商：杭州云启科技有限公司。
+  true_entities:
+  - - 公司名
+    - 杭州云启科技有限公司
+  note: 黑名单
+  case_id: case-0026
+  safety_critical: false
+- text: 甲方杭州云启科技有限公司今日签约
+  true_entities:
+  - - 公司名
+    - 杭州云启科技有限公司
+  note: 无标点甲方前缀
+  case_id: case-0027
+  safety_critical: false
+- text: 我们合作的杭州云启科技有限公司
+  true_entities:
+  - - 公司名
+    - 杭州云启科技有限公司
+  note: 无标点我们合作的
+  case_id: case-0028
+  safety_critical: false
+- text: 联系人张伟，对接杭州云启科技有限公司项目
+  true_entities:
+  - - 公司名
+    - 杭州云启科技有限公司
+  - - 姓名
+    - 张伟
+  note: 黑名单+人名
+  case_id: case-0029
+  safety_critical: false
+- text: 我司已签约：杭州云启科技有限公司
+  true_entities:
+  - - 公司名
+    - 杭州云启科技有限公司
+  note: 黑名单冒号分隔
+  case_id: case-0030
+  safety_critical: false
+- text: 聘请杭州云启科技有限公司提供咨询服务
+  true_entities:
+  - - 公司名
+    - 杭州云启科技有限公司
+  note: 聘请句式
+  case_id: case-0031
+  safety_critical: false
+- text: 供应商：星轨数据服务（示例）有限公司。
+  true_entities:
+  - - 公司名
+    - 星轨数据服务（示例）有限公司
+  note: 黑名单
+  case_id: case-0032
+  safety_critical: false
+- text: 甲方星轨数据服务（示例）有限公司今日签约
+  true_entities:
+  - - 公司名
+    - 星轨数据服务（示例）有限公司
+  note: 无标点甲方前缀
+  case_id: case-0033
+  safety_critical: false
+- text: 我们合作的星轨数据服务（示例）有限公司
+  true_entities:
+  - - 公司名
+    - 星轨数据服务（示例）有限公司
+  note: 无标点我们合作的
+  case_id: case-0034
+  safety_critical: false
+- text: 联系人张伟，对接星轨数据服务（示例）有限公司项目
+  true_entities:
+  - - 公司名
+    - 星轨数据服务（示例）有限公司
+  - - 姓名
+    - 张伟
+  note: 黑名单+人名
+  case_id: case-0035
+  safety_critical: false
+- text: 我司已签约：星轨数据服务（示例）有限公司
+  true_entities:
+  - - 公司名
+    - 星轨数据服务（示例）有限公司
+  note: 黑名单冒号分隔
+  case_id: case-0036
+  safety_critical: false
+- text: 聘请星轨数据服务（示例）有限公司提供咨询服务
+  true_entities:
+  - - 公司名
+    - 星轨数据服务（示例）有限公司
+  note: 聘请句式
+  case_id: case-0037
+  safety_critical: false
+- text: 项目代号-苍梧材料归档。
+  true_entities:
+  - - 自定义敏感词
+    - 项目代号-苍梧
+  note: 领域词
+  case_id: case-0038
+  safety_critical: false
+- text: 产品代号-玄鸟材料归档。
+  true_entities:
+  - - 自定义敏感词
+    - 产品代号-玄鸟
+  note: 领域词
+  case_id: case-0039
+  safety_critical: false
+- text: 内部代号-昆仑材料归档。
+  true_entities:
+  - - 自定义敏感词
+    - 内部代号-昆仑
+  note: 领域词
+  case_id: case-0040
+  safety_critical: false
+- text: 机密项目-磐石材料归档。
+  true_entities:
+  - - 自定义敏感词
+    - 机密项目-磐石
+  note: 领域词
+  case_id: case-0041
+  safety_critical: false
+- text: 新闻：中国石油天然气集团有限公司发布年报。
+  true_entities:
+  - - 公司名
+    - 中国石油天然气集团有限公司
+  note: 公开实体复核
+  case_id: case-0042
+  safety_critical: false
+- text: 新闻：浙江大学发布年报。
+  true_entities:
+  - - 公司名
+    - 浙江大学
+  note: 公开实体复核
+  case_id: case-0043
+  safety_critical: false
+- text: 新闻：国家电网有限公司发布年报。
+  true_entities:
+  - - 公司名
+    - 国家电网有限公司
+  note: 公开实体复核
+  case_id: case-0044
+  safety_critical: false
+- text: 新闻：中国工商银行股份有限公司发布年报。
+  true_entities:
+  - - 公司名
+    - 中国工商银行股份有限公司
+  note: 公开实体复核
+  case_id: case-0045
+  safety_critical: false
+- text: 新闻：阿里巴巴（中国）有限公司发布年报。
+  true_entities:
+  - - 公司名
+    - 阿里巴巴（中国）有限公司
+  note: 公开实体复核
+  case_id: case-0046
+  safety_critical: false
+- text: 经办人张伟审批。
+  true_entities:
+  - - 姓名
+    - 张伟
+  note: 人名词典
+  case_id: case-0047
+  safety_critical: false
+- text: 经办人王芳审批。
+  true_entities:
+  - - 姓名
+    - 王芳
+  note: 人名词典
+  case_id: case-0048
+  safety_critical: false
+- text: 地址：北京市朝阳区望京街，合同编号：HT-2024-0001。
+  true_entities:
+  - - 详细地址
+    - 北京市朝阳区望京街
+  - - 编号
+    - 合同编号：HT-2024-0001
+  note: 地址+编号
+  case_id: case-0049
+  safety_critical: false
+- text: 客户编号：KH-2026-0091，联系人王芳。
+  true_entities:
+  - - 编号
+    - 客户编号：KH-2026-0091
+  - - 姓名
+    - 王芳
+  note: 编号+人名
+  case_id: case-0050
+  safety_critical: false
+- text: 我们公司的产品已上线。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0051
+  safety_critical: true
+- text: 相关产品持续迭代，公司简介见官网。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0052
+  safety_critical: true
+- text: 本公司产品手册与产品名称见附录。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0053
+  safety_critical: true
+- text: 集团公司、有限公司、股份公司均为泛指。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0054
+  safety_critical: true
+- text: 解决方案与服务内容已更新。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0055
+  safety_critical: true
+- text: 公司概况：本公司专注云计算。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0056
+  safety_critical: true
+- text: 所有相关产品均已通过测试。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0057
+  safety_critical: true
+- text: 本项目由我方统筹推进。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0058
+  safety_critical: true
+- text: 医院、大学、银行等公共服务机构见官网。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0059
+  safety_critical: true
+- text: 产品介绍详见附录。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0060
+  safety_critical: true
+- text: 关于我们与公司发展历程。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0061
+  safety_critical: true
+- text: 各分公司应统一落实规范。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0062
+  safety_critical: true
+- text: 服务内容与解决方案见官网。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0063
+  safety_critical: true
+- text: 本公司产品名称已变更。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0064
+  safety_critical: true
+- text: 我们公司专注研发，产品名称见官网。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0065
+  safety_critical: true
+- text: 集团公司与有限公司均为泛指。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0066
+  safety_critical: true
+- text: 有限公司均参与本次招标公告。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0067
+  safety_critical: true
+- text: 产品型号与解决方案见官网简介。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0068
+  safety_critical: true
+- text: 本公司简介发布在官方网站。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0069
+  safety_critical: true
+- text: 相关产品的服务内容已更新。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0070
+  safety_critical: true
+- text: 他们公司的方案仅供参考。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0071
+  safety_critical: true
+- text: 贵公司产品手册已收到。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0072
+  safety_critical: true
+- text: 本产品为通用解决方案。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0073
+  safety_critical: true
+- text: 公司文化与发展历程见官网。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0074
+  safety_critical: true
+- text: 本项目产品介绍已归档。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0075
+  safety_critical: true
+- text: 相关项目名称见清单。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0076
+  safety_critical: true
+- text: 服务方案与产品简介见附录。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0077
+  safety_critical: true
+- text: 本公司服务面向所有客户。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0078
+  safety_critical: true
+- text: 解决方案与报价见官方网站。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0079
+  safety_critical: true
+- text: 产品型号为通用型号。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0080
+  safety_critical: true
+- text: 本公司官网介绍见首页。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0081
+  safety_critical: true
+- text: 相关产品手册已更新版本。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0082
+  safety_critical: true
+- text: 我们公司方案仅供参考。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0083
+  safety_critical: true
+- text: 该产品名称已变更公示。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0084
+  safety_critical: true
+- text: 公司动态与新闻见官网。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0085
+  safety_critical: true
+- text: 所有项目均已完成验收。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0086
+  safety_critical: true
+- text: 本公司服务条款见官网。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0087
+  safety_critical: true
+- text: 相关解决方案简介见附录。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0088
+  safety_critical: true
+- text: 我们公司产品已迭代三版。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0089
+  safety_critical: true
+- text: 该项目服务范围见官网。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0090
+  safety_critical: true
+- text: 公司年报摘要见官方发布。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0091
+  safety_critical: true
+- text: 所有产品均为通用规格。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0092
+  safety_critical: true
+- text: 我们公司简介见官网首页。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0093
+  safety_critical: true
+- text: 该解决方案面向通用客户。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0094
+  safety_critical: true
+- text: 本产品介绍见宣传册。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0095
+  safety_critical: true
+- text: 相关公司动态见新闻。
+  true_entities: []
+  note: 应抑制负例
+  case_id: case-0096
+  safety_critical: true
+- text: 客户：杭州云启科技有限公司，手机13812345678，邮箱a@b.com，经办人张伟。
+  true_entities:
+  - - 公司名
+    - 杭州云启科技有限公司
+  - - 手机号
+    - '13812345678'
+  - - 邮箱
+    - a@b.com
+  - - 姓名
+    - 张伟
+  note: 混合
+  case_id: case-0097
+  safety_critical: false
+- text: 员工王芳，身份证11010519491231002X，手机13900001111。
+  true_entities:
+  - - 姓名
+    - 王芳
+  - - 身份证号
+    - 11010519491231002X
+  - - 手机号
+    - '13900001111'
+  note: 混合
+  case_id: case-0098
+  safety_critical: false
+- text: 星轨数据服务（示例）有限公司，联系人王芳，座机010-12345678。
+  true_entities:
+  - - 公司名
+    - 星轨数据服务（示例）有限公司
+  - - 姓名
+    - 王芳
+  - - 固定电话
+    - 010-12345678
+  note: 混合
+  case_id: case-0099
+  safety_critical: false
+- text: 项目代号-苍梧验收，经办人张伟，邮箱ops@demo.cn。
+  true_entities:
+  - - 自定义敏感词
+    - 项目代号-苍梧
+  - - 姓名
+    - 张伟
+  - - 邮箱
+    - ops@demo.cn
+  note: 混合
+  case_id: case-0100
+  safety_critical: false
+- text: 国家电网有限公司发布公告，联系电话13711112222。
+  true_entities:
+  - - 公司名
+    - 国家电网有限公司
+  - - 手机号
+    - '13711112222'
+  note: 公开+手机
+  case_id: case-0101
+  safety_critical: false
